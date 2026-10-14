@@ -1,13 +1,13 @@
-# [Vic] Ray Contribution Report — August–September 2026
+# [Vic] Ray Contribution Report — September–October 2026
 
-**Period:** 2026-08-07 – 2026-10-11
+**Period:** 2026-09-01 – 2026-10-11
 **GitHub:** [@viiccwen](https://github.com/viiccwen)
 **Area:** Ray Data
 
 ## Summary
 
-- **15** PRs merged.
-- **2** PRs closed.
+- **10** PRs merged.
+- **1** PR closed.
 - **8** issues filed and **2** optimizer issues claimed.
 
 ## Pull Requests
@@ -26,18 +26,12 @@
 | 2026-09-17 | [#65278 — [Data] Fix WebDataset docs and encoder typing](https://github.com/ray-project/ray/pull/65278) | Fixes the `Dataset.write_webdataset()` documentation and the type contract of the WebDataset encoder. |
 | 2026-09-15 | [#66126 — [Data] Preserve anti-join rows with an empty unknown-schema side](https://github.com/ray-project/ray/pull/66126) | Fixes a hash-shuffle (V2) anti join bug that dropped rows from the preserved side when the other side was empty and its schema couldn't be inferred. |
 | 2026-09-15 | [#66124 — [Data] Raise `NotImplementedError` in `BlockColumnAccessor.sum`](https://github.com/ray-project/ray/pull/66124) | Fixes `BlockColumnAccessor.sum()`, which returned `NotImplementedError` instead of raising it. |
-| 2026-08-27 | [#65666 — [Data] Export task USS distribution metrics](https://github.com/ray-project/ray/pull/65666) | Exports the mean and max of the task peak USS distribution to Prometheus, and adds a per-operator max USS chart to the Tasks section of the Ray Data Grafana dashboard. |
-| 2026-08-26 | [#65716 — [Data] Remove unused issue detector metrics](https://github.com/ray-project/ray/pull/65716) | Removes the unused `issue_detector` operator metrics along with their reset and accumulation logic. |
-| 2026-08-21 | [#65480 — [Data] Pin fused map function for shuffle tasks](https://github.com/ray-project/ray/pull/65480) | Stops large UDF closures from being serialized again for every shuffle task. Up to **12.84x** faster. |
-| 2026-08-18 | [#65509 — [Data] Modify maximum memory to OOM prevention docs](https://github.com/ray-project/ray/pull/65509) | Updates the OOM prevention docs to recommend setting `memory` to 125% of the max worker heap memory. |
-| 2026-08-14 | [#65482 — [Data] Increase `test_tensor` timeout classification to Medium](https://github.com/ray-project/ray/pull/65482) | Raises the Bazel size of `//python/ray/data:test_tensor` from `small` to `medium`. |
 
 ### Closed
 
 | Date | PR | Description |
 |---|---|---|
 | 2026-09-17 | [#65450 — [Data] Dereference ObjectRefs passed through map UDF `fn_args`](https://github.com/ray-project/ray/pull/65450) | Proposed passing `ObjectRef`s in `fn_args` as top-level task arguments so that the scheduler waits on them and UDFs no longer need to call `ray.get()`. Closed without merging because of backward-compatibility concerns. |
-| 2026-08-19 | [#65586 — [Data] Track launch-time memory requests in high-memory detection](https://github.com/ray-project/ray/pull/65586) | Proposed recording each map task's resolved memory request and safe-memory threshold at launch time, so that `HighMemoryIssueDetector` compares aligned averages. Closed without merging. |
 
 ### Open
 
