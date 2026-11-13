@@ -11,6 +11,7 @@ Monthly reports of my open source contributions to [Ray](https://github.com/ray-
 | Month | Period | Report |
 |---|---|---|
 | September-October 2026 | 2026-09-01 – 2026-10-11 | [September/report.md](September/report.md) |
+| October 2026 | 2026-10-12 – 2026-11-11 | [October/report.md](October/report.md) |
 
 ## Report Structure
 
